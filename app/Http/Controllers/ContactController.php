@@ -117,5 +117,7 @@ class ContactController extends Controller
     {
         $contact = Contact::find($id);
         $contact->delete();
+
+        return redirect('/contacts')->with('success', 'Contact Deleted!');
     }
 }
